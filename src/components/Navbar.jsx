@@ -4,6 +4,7 @@ import { Route, Routes, NavLink , useLocation} from "react-router-dom";
 import { About } from "../pages/About";
 import { useState } from "react";
 import { Home } from "../pages/Home/index";
+import { Contact } from "../pages/Contact";
 
 function NavbarItems({ to, name }) {
   const location = useLocation();
@@ -45,6 +46,7 @@ export function Navbar() {
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
