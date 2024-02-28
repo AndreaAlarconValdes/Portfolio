@@ -3,7 +3,7 @@ import { useNavbarRoutes } from "../hooks/use-navbar-routes";
 import { Route, Routes, NavLink , useLocation} from "react-router-dom";
 import { About } from "../pages/About";
 import { useState } from "react";
-import { Home } from "../pages/Home";
+import { Home } from "../pages/Home/index";
 
 function NavbarItems({ to, name }) {
   const location = useLocation();
