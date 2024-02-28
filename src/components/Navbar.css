@@ -1,0 +1,90 @@
+.nav-container {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  background-color: #fafafa;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  animation: enhance-header linear both;
+  animation-timeline: scroll(root block);
+  animation-range: 0 200px;
+}
+
+@keyframes enhance-header {
+  to {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    font-size: 17px;
+    color: black;
+  }
+}
+
+.nav-logo {
+  width: 30px;
+}
+
+.nav-btn {
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+    border: none;
+    color: inherit;
+}
+
+.nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-item {
+  list-style: none;
+
+  .isActive {
+    border-bottom: 2px solid #fdbc96;
+  }
+}
+
+.nav-link {
+  text-decoration: none; 
+  color: inherit; 
+
+  &:hover {
+  color: gray; 
+  }
+
+} 
+
+@media screen and (max-width: 480px) {
+  .nav-btn {
+    display: flex;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 0vh;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  .nav.isOpen {
+    height: 50vh;
+    opacity: 1;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+ 
+}
