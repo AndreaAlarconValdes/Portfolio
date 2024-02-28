@@ -3,13 +3,14 @@ import { useNavbarRoutes } from "../hooks/use-navbar-routes";
 import { Route, Routes, NavLink , useLocation} from "react-router-dom";
 import { About } from "../pages/About";
 import { useState } from "react";
+import { Home } from "../pages/Home";
 
 function NavbarItems({ to, name }) {
   const location = useLocation();
 
   return (
     <li className="nav-item">
-      <NavLink className={`nav-link ${location.pathname === `/${to}` ? "isActive" : ""}`} to={`/${to}`}>
+      <NavLink className={`nav-link ${location.pathname === to ? "isActive" : ""}`} to={to}>
         {name}
       </NavLink>
     </li>
@@ -43,6 +44,7 @@ export function Navbar() {
       </header>
       <Routes>
         <Route path="/about" element={<About />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </>
   );
