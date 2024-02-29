@@ -1,58 +1,75 @@
 .contact-container {
-  margin: 10vh;
-  background-color: #fdf696b0;
-  padding: 4rem;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 5rem;
+  height: 100vh;
+  align-items: center;
+  margin: 0 10rem;
 }
 
-.message-form {
-  width: -webkit-fill-available;
+.main-title {
+  color: #5f5fdb;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-info span,
-.contact-form label {
-  text-transform: uppercase;
-  font-size: x-small;
-  margin-bottom: 0.5rem;
+.contact-container h1 {
+  font-size: 45px;
+  color: #333333;
+  margin-bottom: 3rem;
 }
-.contact-form textarea,
+
 .contact-form input,
+.contact-form textarea {
+  border: none;
+  border-bottom: 2px solid #808080;
+  margin-bottom: 2rem;
+}
+
 .contact-form button {
-    border-radius: 8px;
-    border: 1px solid gray;
-    background-color: #fafafa8c;
-    margin-bottom: 1rem;
-}
-.contact-form button,
-.contact-form input{
-    height: 28px;
-}
-.contact-form textarea{
-    height: 100px;
+  background-color: #5f5fdb;
+  border: none;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 200px;
+  cursor: pointer;
 }
 
-.contact-form button{
-    cursor: pointer;
-    transition: all .3s ease-out;
-    &:hover{
-        background-color: #fafafa;
-     
-    }
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-@media screen and (max-width: 800px) {
-.contact-container {
-    flex-direction: column;
-  padding: 1rem;
-  margin: 8vh 4vw;
-
-gap: 2rem;
+.contact-info h3{
+  color: #333333;
+text-transform: uppercase;
+font-size: small;
 }
+.contact-info p{
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1500px) {
+  .contact-container{
+  margin: 0 5rem;
+
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contact-container{
+  grid-template-columns:  1fr;
+  margin: 0 2rem;
+  align-content: center;
+
+  }
+
+  .contact-container h1 {
+    font-size: 40px;
+  }
 }
