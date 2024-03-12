@@ -1,0 +1,89 @@
+.home-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 200px;
+  padding: 20vh 5vw;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about h1 {
+  font-family: "Space Grotesk";
+  font-weight: 400;
+  font-size: 50px;
+}
+.about p {
+  font-family: "Space Grotesk";
+  font-weight: 400;
+  font-size: 30px;
+}
+.about h1 span,
+.about p span {
+  background-image: linear-gradient(to bottom, transparent 50%, #ffdc58 50%);
+}
+
+.cv-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.cv-btn a {
+  font-family: "Space Grotesk";
+
+  background: #bae6ff;
+  border: 3px solid #000000;
+  border-radius: 999px;
+  width: fit-content;
+  text-decoration: none;
+  color: #000;
+  padding: 10px 40px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: 300ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.name-container{
+  display: flex;
+align-items: center;
+}
+.name {
+  display: flex;
+  gap: 1rem;
+  transform: rotate(-20deg);
+}
+.name p{
+  font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+text-shadow: 0px 4px 0px rgba(231, 231, 231, 0.32);
+}
+
+
+.skills-container{
+  background-color: #000;
+  color: white;
+}
+
+.skills-container ul{
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 25px 0;
+
+}
+.skills-container li{
+  list-style: none;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+}
