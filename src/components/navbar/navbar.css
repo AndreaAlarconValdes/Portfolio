@@ -1,36 +1,27 @@
 .nav-container {
   z-index: 1;
   position: fixed;
-  border: 2px solid gray;
-  border-radius: 30px;
-  margin-top: 0.5rem;
+  border: 3px solid #000000;
+  margin-top: 2rem;
   top: 0;
   width: 90%;
   left: 50%;
-background-color: #fafafa55;
-  padding: 0.3rem 0.5em;
+  background-color: #fafafa;
   transform: translateX(-50%);
-
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
 
-  animation: enhance-header linear both;
-  animation-timeline: scroll(root block);
-  animation-range: 0 200px;
+
 }
 
-@keyframes enhance-header {
-  to {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    font-size: 17px;
-  }
-}
 
-.nav-logo {
-  width: 30px;
+
+.nav-container svg {
+  padding-left: 0.3rem;
+
 }
 
 .nav-btn {
@@ -39,44 +30,29 @@ background-color: #fafafa55;
   background-color: transparent;
   border: none;
   color: inherit;
+  
 }
 
 .nav-list {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
 }
+
 .nav-item {
   list-style: none;
+  padding: 0 20px;
+  border-left: 2px solid black;
+
 
   .isActive {
-    border-bottom: 3px solid #fdbc96;
+    background-image: linear-gradient(to bottom, transparent 50%, #ffdc58 50%);
+
   }
 }
 
 .nav-link {
   text-decoration: none;
   color: #000000;
-  padding: 0 10px;
-  position: relative;
-}
 
-.nav-link::before {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background-color: #fdbc96;
-  border-radius: 999px;
-  transition: all 0.5s;
-}
-
-.nav-link:hover::before {
-  width: 100%;
 }
 
 @media screen and (max-width: 800px) {
@@ -84,9 +60,8 @@ background-color: #fafafa55;
     display: flex;
   }
 
-  .nav-container{
-   background-color: #fafafa;
-   
+  .nav-container {
+    margin-top: 1rem;
   }
 
   .nav {
@@ -104,7 +79,7 @@ background-color: #fafafa55;
     height: auto;
     opacity: 1;
   }
-  
+
   .nav-list {
     margin: 1rem 0;
     padding: 0px;
@@ -112,4 +87,12 @@ background-color: #fafafa55;
     align-items: flex-start;
     gap: 1rem;
   }
+
+  .nav-item {
+  padding: 20px;
+border: 0;
+  border-top: 2px solid black;
+
+  }
 }
+
