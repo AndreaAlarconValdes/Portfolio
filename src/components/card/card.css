@@ -7,13 +7,47 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
-  padding: 10px 50px;
+  padding: 10px 45px;
   align-content: space-evenly;
+  position: relative;
+  font-size: 18px;
+}
+
+.card-container.expanded {
+  height: fit-content;
 }
 
 .card-container p {
-  text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
 }
+
+.card-container .full-description {
+  -webkit-line-clamp: unset;
+}
+
+.more-info-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 2px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+}
+
 .company-logo {
   width: 70px;
   height: 70px;
@@ -26,15 +60,16 @@
 
 @media screen and (max-width: 900px) {
   .card-container {
-    width: 80vw;
+    width: 85vw;
     height: fit-content;
     padding: 10px 35px;
+    font-size: 16px;
   }
 
   .company-logo {
     width: 55px;
     height: 55px;
-    left: -30px;
+    left: -29px;
     top: 15px;
   }
 }
