@@ -4,6 +4,7 @@ import { Route, Routes, NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Home } from "../../pages/home/home";
 import { Contact } from "../../pages/contact/contact";
+import { Experience } from "../../pages/experience/experience";
 
 function NavbarItems({ to, name }) {
   const location = useLocation();
@@ -60,6 +61,7 @@ export function Navbar() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/experience" element={<Experience />} />
       </Routes>
     </>
   );

@@ -16,12 +16,12 @@ export function ContactForm() {
     setSuccessModal(true);
   };
 
-  const openErrorModal =()=>{
-    setErrorModal(true)
-  }
+  const openErrorModal = () => {
+    setErrorModal(true);
+  };
   const closeModal = () => {
     setSuccessModal(false);
-    setErrorModal(false)
+    setErrorModal(false);
   };
 
   const sendEmail = (e) => {
@@ -38,7 +38,7 @@ export function ContactForm() {
         },
         (error) => {
           console.log("FAILED...", error.text);
-          return openErrorModal()
+          return openErrorModal();
         }
       );
   };
@@ -51,10 +51,16 @@ export function ContactForm() {
         to <span>get in touch</span>
       </h1>
       <form className="contact-form" ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input required type="text" name="from_name" />
-        <label>E-mail</label>
-        <input required type="email" name="from_email" />
+        <div className="row">
+          <div className="column">
+            <label>Name</label>
+            <input required type="text" name="from_name" />
+          </div>
+          <div className="column">
+            <label>E-mail</label>
+            <input required type="email" name="from_email" />
+          </div>
+        </div>
         <label>Message</label>
         <textarea
           required
@@ -67,16 +73,37 @@ export function ContactForm() {
         </div>
       </form>
       <Modal isOpen={successModal} onClose={closeModal}>
-
-        <h2>Message sent <span style={{backgroundImage: "linear-gradient(to bottom, transparent 60%, #9dff58 40%)"}}>successfully</span></h2>
-        <p style={{textAlign: "justify"}}>
-        Your message has been successfully sent. Thank you for contacting me, I will check your mail as soon as possible.
+        <h2>
+          Message sent{" "}
+          <span
+            style={{
+              backgroundImage:
+                "linear-gradient(to bottom, transparent 60%, #9dff58 40%)",
+            }}
+          >
+            successfully
+          </span>
+        </h2>
+        <p style={{ textAlign: "justify" }}>
+          Your message has been successfully sent. Thank you for contacting me,
+          I will check your mail as soon as possible.
         </p>
       </Modal>
       <Modal isOpen={errorModal} onClose={closeModal}>
-        <h2><span style={{backgroundImage: "linear-gradient(to bottom, transparent 60%, #ff7f7f 40%)"}}>Error</span> sending message</h2>
-        <p style={{textAlign: "justify"}}>
-        Sorry, there was a problem sending your message. Please try again later or contact me through another channel.
+        <h2>
+          <span
+            style={{
+              backgroundImage:
+                "linear-gradient(to bottom, transparent 60%, #ff7f7f 40%)",
+            }}
+          >
+            Error
+          </span>{" "}
+          sending message
+        </h2>
+        <p style={{ textAlign: "justify" }}>
+          Sorry, there was a problem sending your message. Please try again
+          later or contact me through another channel.
         </p>
       </Modal>
     </section>

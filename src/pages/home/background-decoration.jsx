@@ -1,4 +1,9 @@
-import { TopStar, LeftStar, SunNote, BottomStar } from "../../components/Figures";
+import {
+  TopStar,
+  LeftStar,
+  SunNote,
+  BottomStar,
+} from "../../components/Figures";
 import { useIsMobile } from "../../hooks/use-is-mobile";
 
 export function BackgroundDecoration() {
@@ -6,17 +11,17 @@ export function BackgroundDecoration() {
 
   return (
     <>
-        <TopStar
-          style={{
-            width: "100",
-            height: "136",
-            position: "absolute",
-            right: "0",
-            top: "0",
-            zIndex: "-999",
-          }}
-        />
-     
+      <TopStar
+        style={{
+          width: "100",
+          
+          position: "absolute",
+          right: "0",
+          top: "0",
+          zIndex: "-999",
+        }}
+      />
+
       {!isMobile && (
         <LeftStar
           style={{
@@ -24,37 +29,37 @@ export function BackgroundDecoration() {
             left: "0",
             top: "8%",
             zIndex: "-999",
-            width: "130",
-            height: "115",
+            width: "90",
+            
           }}
         />
       )}
       {isMobile ? (
         <SunNote
+          color="#F3ABCB"
           style={{
             position: "absolute",
             top: "8%",
             left: "8%",
             zIndex: "-999",
             width: "110",
-            height: "220",
+            
           }}
         />
       ) : (
         <SunNote
+          color="#F3ABCB"
           style={{
             position: "absolute",
             top: "20%",
             left: "13%",
             zIndex: "-999",
             width: "165",
-            height: "220",
+            
           }}
         />
       )}
-
     </>
   );
 }
 /* Vector */
-

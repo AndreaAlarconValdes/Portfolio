@@ -1,0 +1,48 @@
+.experience-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin: 15vh 0;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.job-experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.job-experience-container .card-container:nth-child(odd) {
+  margin-right: 150px;
+  transform: rotate(1deg);
+}
+
+.job-experience-container .card-container:nth-child(even) {
+  margin-left: 150px;
+  transform: rotate(-1deg);
+}
+
+@media screen and (max-width: 900px) {
+  .experience-page {
+    margin: 12vh 0;
+  }
+  
+  .header-title {
+    gap: 0.2rem;
+  }
+
+  .job-experience-container .card-container:nth-child(odd) {
+    margin-right: 0px;
+  }
+
+  .job-experience-container .card-container:nth-child(even) {
+    margin-left: 0px;
+  }
+}

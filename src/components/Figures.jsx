@@ -138,7 +138,7 @@ export function LeftStar({ style }) {
   );
 }
 
-export function SunNote({ style }) {
+export function SunNote({ style, color }) {
   return (
     <svg
       viewBox="0 0 205 220"
@@ -151,7 +151,7 @@ export function SunNote({ style }) {
           width="143.482"
           height="149.353"
           transform="translate(122.359 0.121704) rotate(55.0113)"
-          fill="#F3ABCB"
+          fill={color}
         />
         <g filter="url(#filter1_d_1_922)">
           <path
