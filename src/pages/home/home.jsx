@@ -10,7 +10,7 @@ export function Home() {
       <section className="home-container">
         <div className="about">
           <h1>
-            I'm a <span>Full-Stack</span> developer with a passion for Front-end
+            I'm a <span>Full Stack</span> developer with a passion for Frontend
           </h1>
           <p>
             I invite you to <span>explore my portfolio</span>
