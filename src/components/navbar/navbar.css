@@ -4,7 +4,7 @@
   border: 3px solid #000000;
   margin-top: 2rem;
   top: 0;
-  width: 90%;
+  width: 80%;
   left: 50%;
   background-color: #fafafa;
   transform: translateX(-50%);
@@ -12,16 +12,11 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
-
-
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
-
-
 
 .nav-container svg {
   padding-left: 0.3rem;
-
 }
 
 .nav-btn {
@@ -30,7 +25,6 @@ box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
   background-color: transparent;
   border: none;
   color: inherit;
-  
 }
 
 .nav-list {
@@ -42,26 +36,19 @@ box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
   padding: 0 20px;
   border-left: 2px solid black;
 
-
   .isActive {
     background-image: linear-gradient(to bottom, transparent 50%, #ffdc58 50%);
-
   }
 }
 
 .nav-link {
   text-decoration: none;
   color: #000000;
-
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .nav-btn {
     display: flex;
-  }
-
-  .nav-container {
-    margin-top: 1rem;
   }
 
   .nav {
@@ -89,10 +76,8 @@ box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.25);
   }
 
   .nav-item {
-  padding: 20px;
-border: 0;
-  border-top: 2px solid black;
-
+    padding: 20px;
+    border: 0;
+    border-top: 2px solid black;
   }
 }
-
