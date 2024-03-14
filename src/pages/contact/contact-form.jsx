@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { EmphasisIcon } from "../../components/Figures";
+import { EmphasisIcon } from "../../components/icons";
 import { Modal } from "../../components/modal/modal";
 
 const SERVICE_ID = "service_yl1j0mk";

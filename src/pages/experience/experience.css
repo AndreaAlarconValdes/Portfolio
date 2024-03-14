@@ -19,7 +19,6 @@
   gap: 50px;
 }
 
-
 .job-experience-container .card-container:nth-child(odd) {
   margin-right: 150px;
   transform: rotate(1deg);
