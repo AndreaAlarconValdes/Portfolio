@@ -17,7 +17,6 @@
 .contact-container h1 {
   font-size: 45px;
   margin-bottom: 3rem;
-  font-family: "Space Grotesk";
   font-weight: 500;
 }
 
@@ -32,8 +31,6 @@
 }
 
 .contact-form button {
-  font-family: "Space Grotesk";
-
   background: #bae6ff;
   border: 3px solid #000000;
   border-radius: 999px;
@@ -57,12 +54,12 @@ cursor: pointer;
 }
 
 .contact-info h3 {
-  color: #333333;
   text-transform: uppercase;
-  font-size: small;
+
 }
 .contact-info p {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size:  large;
 }
 
 
