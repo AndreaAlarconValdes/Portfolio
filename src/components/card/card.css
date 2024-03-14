@@ -62,14 +62,20 @@
   .card-container {
     width: 85vw;
     height: fit-content;
-    padding: 10px 35px;
+    padding: 10px 40px;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
   }
 
   .company-logo {
     width: 55px;
     height: 55px;
-    left: -29px;
-    top: 15px;
+    left: -28px;
+    top: 20px;
+  }
+
+  .card-container h4 {
+    font-size: 18px;
   }
 }

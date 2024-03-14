@@ -11,16 +11,8 @@
   gap: 2rem;
 }
 
-.about h1 {
-  font-weight: 400;
-  font-size: 50px;
-}
-.about p {
-  font-weight: 400;
-  font-size: 30px;
-}
 .about h1 span,
-.about p span {
+.about h2 span {
   background-image: linear-gradient(to bottom, transparent 50%, #ffdc58 50%);
 }
 
@@ -93,15 +85,7 @@
     flex-direction: column;
     align-items: center;
     gap: 80px;
-    padding: 30vh 5vw 15vh 5vw;
-  }
-
-  .about h1 {
-    font-weight: 500;
-    font-size: 40px;
-  }
-  .about p {
-    font-size: 25px;
+    padding: 25vh 3vw 15vh 3vw;
   }
 
   .skills-container ul {

@@ -1,10 +1,10 @@
 import "./navbar.css";
-import { useNavbarRoutes } from "../../hooks/use-navbar-routes";
 import { Route, Routes, NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Home } from "../../pages/home/home";
 import { Contact } from "../../pages/contact/contact";
 import { Experience } from "../../pages/experience/experience";
+import { routes } from "../../utils/constants";
 
 function NavbarItems({ to, name }) {
   const location = useLocation();
@@ -22,7 +22,6 @@ function NavbarItems({ to, name }) {
 }
 
 export function Navbar() {
-  const { routes } = useNavbarRoutes();
   const [menu, setMenu] = useState(false);
 
   const toggleMenu = () => {

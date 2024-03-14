@@ -1,6 +1,6 @@
 import "./contact.css";
 import { ContactForm } from "./contact-form";
-import { LinkedinIcon, GithubIcon } from "../../components/Icons";
+import { LinkedinIcon, GithubIcon } from "../../components/icons";
 export function Contact() {
   return (
     <>

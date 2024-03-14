@@ -20,7 +20,6 @@
   justify-content: space-between;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
-
 }
 
 .column {
@@ -28,10 +27,12 @@
   flex-direction: column;
 }
 
+.contact-container label {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
 .contact-container h1 {
-  font-size: 45px;
   margin-bottom: 3rem;
-  font-weight: 500;
 }
 
 .contact-container h1 span {
@@ -44,7 +45,6 @@
   margin-bottom: 2rem;
   padding: 0 10px;
   font-size: 16px;
-
 }
 
 .contact-form textarea {
@@ -84,17 +84,19 @@
 }
 .contact-info p {
   margin-bottom: 2rem;
-  font-size: large;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1020px) {
   .contact-container {
     grid-template-columns: 1fr;
-    margin: 0 2rem;
+    margin: 15vh 5vw;
     align-content: center;
+    padding: 50px 30px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.4);
   }
 
-  .contact-container h1 {
-    font-size: 40px;
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.3;
   }
 }
