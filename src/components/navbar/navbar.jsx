@@ -1,33 +1,27 @@
 import "./navbar.css";
-import { Route, Routes, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Home } from "../../pages/home/home";
-import { Contact } from "../../pages/contact/contact";
-import { Experience } from "../../pages/experience/experience";
 import { routes } from "../../utils/constants";
 
-function NavbarItems({ to, name }) {
-  const location = useLocation();
-
-  return (
-    <li className="nav-item">
-      <NavLink
-        className={`nav-link ${location.pathname === to ? "isActive" : ""}`}
-        to={to}
-      >
-        {name}
-      </NavLink>
-    </li>
-  );
-}
-
 export function Navbar() {
+  const location = useLocation();
   const [menu, setMenu] = useState(false);
 
   const toggleMenu = () => {
     setMenu(!menu);
   };
 
+  const handleClick = (to) => {
+    toggleMenu();
+    const targetElement = document.getElementById(to);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <>
       <header className="nav-container">
@@ -43,7 +37,6 @@ export function Navbar() {
             fill="#0C0C0C"
           />
         </svg>
-
         <button onClick={toggleMenu} className="nav-btn">
           <span className="material-symbols-outlined">
             {menu ? "close" : "menu"}
@@ -52,16 +45,23 @@ export function Navbar() {
         <nav className={`nav ${menu ? "isOpen" : ""}`}>
           <ul className="nav-list">
             {routes.map((route) => (
-              <NavbarItems key={route.to} {...route} />
+              <li className="nav-item" key={route.name}>
+                <NavLink
+                  className={`nav-link ${
+                    location.pathname === route.to ? "isActive" : ""
+                  }`}
+                  to={route.to}
+                  onClick={() => {
+                    handleClick(route.name);
+                  }}
+                >
+                  {route.name}
+                </NavLink>
+              </li>
             ))}
           </ul>
         </nav>
       </header>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/experience" element={<Experience />} />
-      </Routes>
     </>
   );
 }

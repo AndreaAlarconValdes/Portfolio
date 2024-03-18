@@ -3,8 +3,7 @@ import { ContactForm } from "./contact-form";
 import { LinkedinIcon, GithubIcon } from "../../components/icons";
 export function Contact() {
   return (
-    <>
-      <main className="contact-container">
+      <main id="contact" className="contact-container">
         <ContactForm />
         <section className="contact-info">
           <h3>Phone number</h3>
@@ -21,6 +20,5 @@ export function Contact() {
           </div>
         </section>
       </main>
-    </>
   );
 }

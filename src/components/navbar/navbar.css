@@ -44,6 +44,7 @@
 .nav-link {
   text-decoration: none;
   color: #000000;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 900px) {

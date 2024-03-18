@@ -8,9 +8,9 @@ export function Experience() {
   const isMobile = useIsMobile();
 
   return (
-    <div className="experience-page">
+    <div id="experience" className="experience-page">
       <header className="header-title">
-        <h1>My Job Experience</h1>
+        <h1>Job Experience</h1>
         <Sun
           color="#BAE6FF"
           style={{
