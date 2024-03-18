@@ -1,8 +1,9 @@
 export const routes = [
-    { to: "/", name: "Home" },
-    { to: "/projects", name: "Projects" },
-    { to: "/experience", name: "Experience" },
-    { to: "/contact", name: "Contact" },
+    { to: "/", name: "home" },
+    { to: "/about", name: "about" },
+    { to: "/projects", name: "projects" },
+    { to: "/experience", name: "experience" },
+    { to: "/contact", name: "contact" },
   ];
 
 export const jobExperience = [
